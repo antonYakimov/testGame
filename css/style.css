@@ -1,0 +1,141 @@
+.mainDiv{
+  height:500px;
+  background-color: #BFBFBF;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.ui-form {
+  position: absolute;
+  cursor: pointer;
+  background-color:#333333;
+  color: #EFECCA;
+  -webkit-user-select: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 13px;
+  -webkit-transition: background 0.25s;
+}
+
+
+.ui-form:hover {
+  /*background-color: #7F7F7F;*/
+  -webkit-transition: background 0.25s;
+  cursor: pointer;
+}
+
+.form_cube {
+  width: 50px;
+  height: 50px;
+  animation: rotate 2s infinite;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.form_circle {
+  width: 50px;
+  height: 50px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.form_triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #333333;
+  background: none;
+}
+
+.ui-form.form_triangle:hover {
+  background: none;
+  /*border-bottom: 50px solid #7F7F7F;*/
+}
+
+.scoreWindow {
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #7F7F7F;
+}
+
+.startWindow {
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #7F7F7F;
+}
+
+.gameOver {
+  position: relative;
+  display: none;
+  color: #EFECCA;
+  font-size: 96px;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 0 4px 3px rgba(0,0,0,0.4), 0 8px 13px rgba(0,0,0,0.1), 0 18px 23px rgba(0,0,0,0.1);
+}
+
+.start {
+  color: #BFBFBF;
+  position: absolute;
+  top: calc(50% - 35px);
+  cursor: pointer;
+}
+
+.startDiv {
+  background-color:#0f0f0f;
+  background-color: rgba(0,0,0,0.25);
+  height: 500px;
+  position: relative;
+}
+
+.js-score {
+  color: #EFECCA;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.js-level {
+  color: #EFECCA;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.js-info {
+  position: absolute;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  color: #EFECCA;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.resultTableHeader {
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #EFECCA;
+  color: #7F7F7F;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.resultTableName, .resultTableScore {
+  font-size: 20px;
+  font-weight: bold;
+  background: #BFBFBF;
+  color: #EFECCA ;
+}
+
+.nopadding {
+  padding: 0 !important;
+}

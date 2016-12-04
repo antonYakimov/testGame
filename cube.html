@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cube</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery.animate-colors.js"></script>
+  <script type="text/javascript" src="js/underscore.js"></script>
+  <script src="js/cube.js"></script>
+</head>
+
+<body>
+  <div class="clearfix">
+    <div class="col-md-10 nopadding">
+      <div class="row">
+        <div class="startWindow col-md-8"></div>
+        <div class="scoreWindow col-md-4">
+          <div class="row">
+            <div class="js-score col-md-8">Score:</div>
+            <label class="js-level col-md-4">Level:</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mainDiv col-md-12">
+          <div class="js-form ui-form text-center">
+            <label id="js-label-score"></label>
+          </div>
+          <div class="row">
+            <div class="gameOver text-center col-md-12">Game Over!</div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="startDiv text-center">
+                <i class="start fa fa-play-circle-o fa-5x" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="js-info col-md-12 text-center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 nopadding">
+     <div class="resultTableHeader text-center">Result Table</div>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="resultTableName text-center">Name</div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="resultTableScore text-center">Score</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
