@@ -1,4 +1,4 @@
-.mainDiv{
+.js-main-div {
   height:500px;
   background-color: #BFBFBF;
   position: relative;
@@ -54,7 +54,7 @@
   /*border-bottom: 50px solid #7F7F7F;*/
 }
 
-.scoreWindow {
+.ui-score-window {
   height: 50px;
   position: relative;
   margin: 0 auto;
@@ -62,7 +62,7 @@
   background-color: #7F7F7F;
 }
 
-.startWindow {
+.ui-start-window {
   height: 50px;
   position: relative;
   margin: 0 auto;
@@ -70,7 +70,7 @@
   background-color: #7F7F7F;
 }
 
-.gameOver {
+.js-game-over {
   position: relative;
   display: none;
   color: #EFECCA;
@@ -80,14 +80,14 @@
   text-shadow: 0 4px 3px rgba(0,0,0,0.4), 0 8px 13px rgba(0,0,0,0.1), 0 18px 23px rgba(0,0,0,0.1);
 }
 
-.start {
+.js-start {
   color: #BFBFBF;
   position: absolute;
   top: calc(50% - 35px);
   cursor: pointer;
 }
 
-.startDiv {
+.js-start-div {
   background-color:#0f0f0f;
   background-color: rgba(0,0,0,0.25);
   height: 500px;
@@ -117,7 +117,7 @@
   font-weight: bold;
 }
 
-.resultTableHeader {
+.ui-result-table-header {
   height: 50px;
   position: relative;
   margin: 0 auto;
@@ -129,11 +129,25 @@
   padding-top: 10px;
 }
 
-.resultTableName, .resultTableScore {
+.ui-result-table-name, .ui-result-table-score {
   font-size: 20px;
   font-weight: bold;
   background: #BFBFBF;
   color: #EFECCA ;
+}
+
+.ui-result-name{
+  background: #BFBFBF;
+  font-size: 16px;
+  color: #EFECCA ;
+  font-style: italic;
+}
+
+.ui-result-result {
+  background: #BFBFBF;
+  font-size: 16px;
+  color: #EFECCA ;
+  font-style: italic;
 }
 
 .nopadding {

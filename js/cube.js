@@ -36,6 +36,27 @@ var countPointsTillCubeMoving = function (containerWidth,step,cubeLength,minSize
   return timer;
 };
 
+var generateResultRowTemplate = function (result) {
+  return '<div class="row">' +
+    '<div class="col-md-6">' +
+      '<div class="ui-result-name text-center">' + result.name + '</div>' +
+    '</div>' +
+    '<div class="col-md-6">' +
+      '<div class="ui-result-result text-center">' + result.result + '</div>' +
+    '</div>' +
+  '</div>';
+};
+
+var appendResultRow = function (result) {
+  $(".js-result-container").append(generateResultRowTemplate(result))
+};
+
+var renderResults = function (results, containerClass) {
+  $(containerClass).empty();
+  var sortedArray = _.sortBy(results, 'result').reverse();
+  _.each(sortedArray, appendResultRow)
+};
+
 var isRunning = false;
 
 var level = 0;
@@ -46,18 +67,18 @@ var numberOfGames = 0;
 
 $(document).ready(function() {
   var score = 0;
-  var containerWidth = $(".mainDiv").width();
+  var containerWidth = $(".js-main-div").width();
   var containerHeight = 500;
   var minSize = 50;
   var maxSize = 100;
 
-  $(".start").on("click", function () {
+  $(".js-start").on("click", function () {
     console.log(isRunning) ;
     if (!isRunning){
       $(".js-form").stop();
       startAnimation(score, containerHeight, containerWidth, minSize, maxSize);
     }
-    $(".startDiv").hide();
+    $(".js-start-div").hide();
 
   });
 });
@@ -78,7 +99,7 @@ var initFormSize = function (top, cubeLength) {
   });
   var i = getRandomInt(0, forms.length);
   var formClass = forms[i];
-    $(".js-form").addClass(formClass).css({
+  $(".js-form").addClass(formClass).css({
     top: top,
     left: -cubeLength
   });
@@ -109,19 +130,16 @@ var startAnimation = function (score,containerHeight, containerWidth, minSize, m
 
     numberOfGames++;
 
-    console.log({
-      name: 'Game_' + numberOfGames,
-      result: score
-    });
-
     results.push({
       name: 'Game_' + numberOfGames,
       result: score
     });
 
+    renderResults(results, ".js-result-container");
+
     $(".js-info").hide();
-    $(".gameOver").show().fadeOut(1200, function () {
-      $(".startDiv").fadeIn(2000);
+    $(".js-game-over").show().fadeOut(1200, function () {
+      $(".js-start-div").fadeIn(2000);
     });
   });
 

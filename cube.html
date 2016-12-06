@@ -14,50 +14,51 @@
 </head>
 
 <body>
-  <div class="clearfix">
-    <div class="col-md-10 nopadding">
-      <div class="row">
-        <div class="startWindow col-md-8"></div>
-        <div class="scoreWindow col-md-4">
-          <div class="row">
-            <div class="js-score col-md-8">Score:</div>
-            <label class="js-level col-md-4">Level:</label>
-          </div>
+<div class="clearfix">
+  <div class="col-md-10 nopadding">
+    <div class="row">
+      <div class="ui-start-window col-md-8"></div>
+      <div class="ui-score-window col-md-4">
+        <div class="row">
+          <div class="js-score col-md-8">Score:</div>
+          <label class="js-level col-md-4">Level:</label>
         </div>
       </div>
-      <div class="row">
-        <div class="mainDiv col-md-12">
-          <div class="js-form ui-form text-center">
-            <label id="js-label-score"></label>
+    </div>
+    <div class="row">
+      <div class="js-main-div col-md-12">
+        <div class="js-form ui-form text-center">
+          <label id="js-label-score"></label>
+        </div>
+        <div class="row">
+          <div class="js-game-over text-center col-md-12">Game Over!</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="js-start-div text-center">
+              <i class="js-start fa fa-play-circle-o fa-5x" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="row">
-            <div class="gameOver text-center col-md-12">Game Over!</div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="startDiv text-center">
-                <i class="start fa fa-play-circle-o fa-5x" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="row">
-              <div class="js-info col-md-12 text-center"></div>
-            </div>
+            <div class="js-info col-md-12 text-center"></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-2 nopadding">
-     <div class="resultTableHeader text-center">Result Table</div>
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="resultTableName text-center">Name</div>
-        </div>
-        <div class="col-md-6 ">
-          <div class="resultTableScore text-center">Score</div>
-        </div>
-      </div>
-    </div>
-
   </div>
+  <div class="col-md-2 nopadding">
+    <div class="ui-result-table-header text-center">Result Table</div>
+    <div class="row">
+      <div class="col-md-6 ">
+        <div class="ui-result-table-name text-center">Name</div>
+      </div>
+      <div class="col-md-6 ">
+        <div class="ui-result-table-score text-center">Score</div>
+      </div>
+    </div>
+    <div class="js-result-container"></div>
+  </div>
+
+</div>
 </body>
 </html>
