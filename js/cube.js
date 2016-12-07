@@ -110,8 +110,8 @@ var startAnimation = function (score,containerHeight, containerWidth, minSize, m
   var top = getRandomArbitary(0, (containerHeight - cubeLength));
   isRunning = true;
 
-  $(".js-score").text(score);
-  $(".js-level").text(level);
+  $(".js-score").text('Score: '+ score);
+  $(".js-level").text('Level: '+ level);
 
   initFormSize(top, cubeLength);
 

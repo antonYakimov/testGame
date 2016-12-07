@@ -16,11 +16,13 @@
   font-size: 16px;
   padding-top: 13px;
   -webkit-transition: background 0.25s;
+  display: inline-block;
+  text-align: center;
 }
 
 
 .ui-form:hover {
-  /*background-color: #7F7F7F;*/
+  background-color: #7F7F7F;
   -webkit-transition: background 0.25s;
   cursor: pointer;
 }
@@ -47,15 +49,15 @@
   border-right: 25px solid transparent;
   border-bottom: 50px solid #333333;
   background: none;
+
 }
 
 .ui-form.form_triangle:hover {
   background: none;
-  /*border-bottom: 50px solid #7F7F7F;*/
+  border-bottom: 50px solid #7F7F7F;
 }
 
 .ui-score-window {
-  height: 50px;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -95,6 +97,7 @@
 }
 
 .js-score {
+  margin-right: 200px;
   color: #EFECCA;
   font-size: 20px;
   font-weight: bold;
@@ -102,6 +105,7 @@
 }
 
 .js-level {
+  margin-right: 200px;
   color: #EFECCA;
   font-size: 20px;
   font-weight: bold;
@@ -152,4 +156,19 @@
 
 .nopadding {
   padding: 0 !important;
+}
+
+.background-results{
+  color: #BFBFBF !important;
+}
+
+.ui-my-custom-button{
+  margin: 14px 14px;
+  background: #EFECCA;
+  color: #7F7F7F ;
+  border-color: #7F7F7F ;
+}
+
+.ui-my-custom-button:hover{
+  background: #BFBCA1;
 }
