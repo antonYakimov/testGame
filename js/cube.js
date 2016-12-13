@@ -39,12 +39,12 @@ var countPointsTillCubeMoving = function (containerWidth,step,cubeLength,minSize
 var generateResultRowTemplate = function (result) {
   return '<div class="row">' +
     '<div class="col-md-6">' +
-      '<div class="ui-result-name text-center">' + result.name + '</div>' +
+    '<div class="ui-result-name text-center">' + result.name + '</div>' +
     '</div>' +
     '<div class="col-md-6">' +
-      '<div class="ui-result-result text-center">' + result.result + '</div>' +
+    '<div class="ui-result-result text-center">' + result.result + '</div>' +
     '</div>' +
-  '</div>';
+    '</div>';
 };
 
 var appendResultRow = function (result) {
@@ -64,6 +64,8 @@ var levels = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000];
 
 var results = [];
 var numberOfGames = 0;
+
+var login = null;
 
 $(document).ready(function() {
   var score = 0;
@@ -128,14 +130,26 @@ var startAnimation = function (score,containerHeight, containerWidth, minSize, m
     isRunning = false;
     level = 0;
 
-    numberOfGames++;
+    numberOfGames = results.length + 1;
 
-    results.push({
+    var result = {
       name: 'Game_' + numberOfGames,
       result: score
-    });
+    };
 
-    renderResults(results, ".js-result-container");
+    if (_.isNull(login)) {
+      results.push(result);
+      renderResults(results, ".js-result-container");
+    } else {
+      $.ajax({
+        method: "POST",
+        url: "/user/" + login + "/results",
+        contentType: "application/json",
+        data: JSON.stringify(result),
+        // success: getAnrInsertResults,
+        error: getAndInsertResults,
+      });
+    }
 
     $(".js-info").hide();
     $(".js-game-over").show().fadeOut(1200, function () {

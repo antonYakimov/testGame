@@ -15,41 +15,43 @@
   <div class="col-md-10 nopadding">
     <div class="ui-score-window clearfix">
       <div class="pull-left">
-        <div class="text-center">
-          <button type="button" class="btn btn-lg ui-my-custom-button js-btn-login" data-toggle="modal" data-target=".js-login-modal">Войти</button>
-        </div>
-        <div class="modal fade js-login-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Вход в систему</h4>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="form-group">
-                    <label>Login</label>
-                    <input type="text" class="form-control js-input-login" placeholder="Login" aria-describedby="helpBlock2">
-                  </div>
-                  <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control js-input-password" placeholder="Password">
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn ui-my-custom-button js-btn-send-info">Войти</button>
-              </div>
+        <button type="button" class="btn btn-lg ui-my-custom-button js-btn-login" data-toggle="modal" data-target=".js-login-modal">Войти</button>
+        <button type="button" class="btn btn-lg ui-my-custom-button js-btn-logout" data-target=".js-login-modal">Выйти</button>
+      </div>
+      <div class="pull-left">
+        <div class="js-login-name"></div>
+      </div>
+      <div class="modal fade js-login-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Вход в систему</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label>Login</label>
+                  <input type="text" class="form-control js-input-login" placeholder="Login" aria-describedby="helpBlock2">
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control js-input-password" placeholder="Password">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn ui-my-custom-button js-btn-send-info">Войти</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="js-score text-right">Score: 0</div>
-      <div class="js-level text-right">Level: 0</div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="js-main-div">
+    <div class="js-score text-right">Score: 0</div>
+    <div class="js-level text-right">Level: 0</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="js-main-div">
         <div class="js-form ui-form">
           <label id="js-label-score"></label>
         </div>
@@ -71,21 +73,21 @@
           </div>
         </div>
       </div>
-      </div>
     </div>
   </div>
-  <div class="col-md-2 nopadding">
-    <div class="ui-result-table-header text-center">Result Table</div>
-    <div class="row background-results">
-      <div class="col-md-6 ">
-        <div class="ui-result-table-name text-center">Name</div>
-      </div>
-      <div class="col-md-6 ">
-        <div class="ui-result-table-score text-center">Score</div>
-      </div>
+</div>
+<div class="col-md-2 nopadding">
+  <div class="ui-result-table-header text-center">Result Table</div>
+  <div class="row background-results">
+    <div class="col-md-6 ">
+      <div class="ui-result-table-name text-center">Name</div>
     </div>
-    <div class="js-result-container"></div>
+    <div class="col-md-6 ">
+      <div class="ui-result-table-score text-center">Score</div>
+    </div>
   </div>
+  <div class="js-result-container"></div>
+</div>
 </div>
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>

@@ -172,3 +172,11 @@
 .ui-my-custom-button:hover{
   background: #BFBCA1;
 }
+
+.js-login-name {
+  color: #EFECCA;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 25px;
+  margin-left: 25px;
+}
